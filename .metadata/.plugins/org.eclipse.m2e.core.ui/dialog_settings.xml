@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\Pinget\Desktop\Programacion\Arg-program\Proyectos\back_end_proyect_final"/>
 			<item value="C:\Users\Pinget\Desktop\Programacion\Arg-program\Proyectos\Back_End-v0\Modulo-8\api"/>
 		</list>
 		<list key="projectNameTemplate">
