@@ -23,7 +23,7 @@ import com.portfolio.api.security.domain.AunthenticationResponse;
 import com.portfolio.api.security.domain.JwtUtil;
 import com.portfolio.api.service.UserService;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "https://nelson-pinget.web.app", maxAge = 3600)
 @RestController
 @RequestMapping("/auth")
 public class AuthController {

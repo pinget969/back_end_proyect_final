@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.portfolio.api.entity.Skill;
 import com.portfolio.api.service.SkillService;
 
-@CrossOrigin(origins = "http://localhost:4200", maxAge = 3600)
+@CrossOrigin(origins = "https://nelson-pinget.web.app", maxAge = 3600)
 @RestController
 @RequestMapping("/api/skills")
 public class SkillController {
