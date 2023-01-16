@@ -9,6 +9,7 @@ com\portfolio\api\security\domain\JwtUtil.class
 com\portfolio\api\service\UserService.class
 com\portfolio\api\security\domain\SecurityConfig.class
 com\portfolio\api\repository\RolRepository.class
+com\portfolio\api\controller\StartController.class
 com\portfolio\api\repository\ProyectRepository.class
 com\portfolio\api\entity\User.class
 com\portfolio\api\security\domain\UserDetailsServiceImpl.class
