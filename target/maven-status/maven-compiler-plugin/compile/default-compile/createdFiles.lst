@@ -6,10 +6,14 @@ com\portfolio\api\entity\Skill.class
 com\portfolio\api\controller\UserController.class
 com\portfolio\api\repository\SkillRepository.class
 com\portfolio\api\security\domain\JwtUtil.class
+com\portfolio\api\controller\AcademicTrainingController.class
+com\portfolio\api\service\AcademicTrainingServiceImpl.class
 com\portfolio\api\service\UserService.class
+com\portfolio\api\repository\AcademicTrainingRepository.class
 com\portfolio\api\security\domain\SecurityConfig.class
 com\portfolio\api\repository\RolRepository.class
 com\portfolio\api\controller\StartController.class
+com\portfolio\api\entity\AcademicTraining.class
 com\portfolio\api\repository\ProyectRepository.class
 com\portfolio\api\entity\User.class
 com\portfolio\api\security\domain\UserDetailsServiceImpl.class
@@ -20,6 +24,7 @@ com\portfolio\api\entity\Login.class
 com\portfolio\api\service\ProyectServiceImpl.class
 com\portfolio\api\entity\Rol.class
 com\portfolio\api\repository\UserRepository.class
+com\portfolio\api\service\AcademicTrainingService.class
 com\portfolio\api\service\UserServiceImpl.class
 com\portfolio\api\controller\AuthController.class
 com\portfolio\api\entity\Proyect.class
