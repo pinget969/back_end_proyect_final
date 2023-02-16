@@ -54,7 +54,7 @@ public class AcademicTrainingController {
 			return ResponseEntity.badRequest().body(response);
 		}
 	}
-	@GetMapping("/findAll")
+	@GetMapping
 	public ResponseEntity<Map<String, Object>>findAllAcademicTraining(){
 		Map<String, Object> response = new HashMap<>();
 		try {
