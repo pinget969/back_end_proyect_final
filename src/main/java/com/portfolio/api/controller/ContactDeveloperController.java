@@ -83,7 +83,7 @@ public class ContactDeveloperController {
 		}	
 	}
 	
-	@DeleteMapping("/delete")
+	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<Map<String, Object>> deleteByIdContact(@PathVariable Long id){
 		Map<String, Object> response = new HashMap<>();
 		try {
