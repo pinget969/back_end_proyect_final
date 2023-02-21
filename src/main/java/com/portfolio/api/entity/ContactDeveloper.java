@@ -26,9 +26,9 @@ public class ContactDeveloper {
 	@NotBlank
 	private String perfiDeveloper;
 	@NotNull
-	private String LocationDeveloper;
+	private String locationDeveloper;
 	@Email
-	private String EmailDeveloper;
+	private String emailDeveloper;
 	@URL
 	private String webSiteDeveloper;
 	@URL
