@@ -9,5 +9,5 @@ import com.portfolio.api.entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long>{
-	Optional<User> findByEmail(String email);  //Borrador - Moverlo a service
+	Optional<User> findByEmail(String email); 
 }

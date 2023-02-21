@@ -25,6 +25,20 @@ public class AcademicTrainingController {
 	@Autowired
 	AcademicTrainingService academicTrainingService;
 	
+	@GetMapping
+	public ResponseEntity<Map<String, Object>>findAllAcademicTraining(){
+		Map<String, Object> response = new HashMap<>();
+		try {
+			response.put("mensaje", academicTrainingService.findAllAcademicTraining());
+			return ResponseEntity.ok(response);
+		}
+		catch( Exception e) {
+			response.put("mensaje", "Error al buscar todas las educaciones académicas");
+			response.put("Error", e.getMessage());
+			return ResponseEntity.badRequest().body(response);
+		}
+	}
+	
 	@PostMapping
 	public ResponseEntity<?> createAcademicTraining(@RequestBody AcademicTraining academicTraining){
 		Map<String, Object> response = new HashMap<>();
@@ -44,8 +58,8 @@ public class AcademicTrainingController {
 	public ResponseEntity<Map<String, Object>> findByIdAcademicTraining(@PathVariable Long id){
 		Map<String, Object> response = new HashMap<>();
 		try {
-			 AcademicTraining academicTraining = academicTrainingService.findByIdAcademicTraining(id);
-			response.put("mensaje", academicTraining);
+			academicTrainingService.deleteAcademicTraining(id);
+			response.put("mensaje", "academia educativa eliminada");
 			return ResponseEntity.ok(response);
 		}
 		catch( Exception e) {
@@ -54,19 +68,7 @@ public class AcademicTrainingController {
 			return ResponseEntity.badRequest().body(response);
 		}
 	}
-	@GetMapping
-	public ResponseEntity<Map<String, Object>>findAllAcademicTraining(){
-		Map<String, Object> response = new HashMap<>();
-		try {
-			response.put("mensaje", academicTrainingService.findAllAcademicTraining());
-			return ResponseEntity.ok(response);
-		}
-		catch( Exception e) {
-			response.put("mensaje", "Error al buscar todas las educaciones académicas");
-			response.put("Error", e.getMessage());
-			return ResponseEntity.badRequest().body(response);
-		}
-	}
+
 	@PutMapping("/id/{id}")
 	public ResponseEntity<?> updateAcademicTraining(@RequestBody AcademicTraining academicTrainingModified, @PathVariable(value = "id") Long idAcademic){
 		Map<String, Object> response = new HashMap<>();
