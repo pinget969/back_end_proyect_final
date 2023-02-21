@@ -8,6 +8,8 @@ import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import org.hibernate.validator.constraints.URL;
+
 import lombok.Data;
 
 @Data
@@ -25,16 +27,13 @@ public class ContactDeveloper {
 	private String perfiDeveloper;
 	@NotNull
 	private String LocationDeveloper;
-	@NotNull
-	@NotBlank
 	@Email
 	private String EmailDeveloper;
+	@URL
 	private String webSiteDeveloper;
-	@NotNull
-	@NotBlank
+	@URL
 	private String gitHubDeveloper;
-	@NotNull
-	@NotBlank
+	@URL
 	private String linkedinDevelper;
 
 }
