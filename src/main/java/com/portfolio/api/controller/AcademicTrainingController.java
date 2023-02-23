@@ -58,8 +58,8 @@ public class AcademicTrainingController {
 	public ResponseEntity<Map<String, Object>> findByIdAcademicTraining(@PathVariable Long id){
 		Map<String, Object> response = new HashMap<>();
 		try {
-			academicTrainingService.deleteAcademicTraining(id);
-			response.put("mensaje", "academia educativa eliminada");
+			AcademicTraining academicTraining = academicTrainingService.findByIdAcademicTraining(id);
+			response.put("mensaje", academicTraining);
 			return ResponseEntity.ok(response);
 		}
 		catch( Exception e) {
@@ -77,7 +77,7 @@ public class AcademicTrainingController {
 			return ResponseEntity.ok(response);
 		}
 		catch(Exception e) {
-			response.put("Error al editar la academia educativa", e.getMessage());
+			response.put("error al editar la academia educativa", e.getMessage());
 			return ResponseEntity.badRequest().body(response); 
 		}
 	}
@@ -85,12 +85,12 @@ public class AcademicTrainingController {
 	public ResponseEntity<Map<String, Object>> deleteByIdAcademicTraining(@PathVariable Long id){
 		Map<String, Object> response = new HashMap<>();
 		try {
-			AcademicTraining academicTraining = academicTrainingService.findByIdAcademicTraining(id);
-			response.put("academia educativa eliminada", academicTraining);
+			academicTrainingService.deleteAcademicTraining(id);
+			response.put("mensaje", "academia educativa eliminada");
 			return ResponseEntity.ok(response);
 		}
 		catch( Exception e) {
-			response.put("message", "Error al eliminar la academia educativa.");
+			response.put("message", "error al eliminar la academia educativa.");
 			response.put("Error", e.getMessage());
 			return ResponseEntity.badRequest().body(response);
 		}	
