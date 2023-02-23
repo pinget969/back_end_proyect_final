@@ -81,7 +81,7 @@ public class AcademicTrainingController {
 			return ResponseEntity.badRequest().body(response); 
 		}
 	}
-	@DeleteMapping("/delete")
+	@DeleteMapping("/delete/{id}")
 	public ResponseEntity<Map<String, Object>> deleteByIdAcademicTraining(@PathVariable Long id){
 		Map<String, Object> response = new HashMap<>();
 		try {
